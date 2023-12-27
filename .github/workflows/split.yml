@@ -1,0 +1,19 @@
+name: ci-split
+on: [push, workflow_dispatch]
+jobs:
+  # run end-to-end tests in parallel using the split workflow
+  # https://github.com/bahmutov/cypress-workflows
+  # https://github.com/bahmutov/cypress-split
+  e2e:
+    uses: bahmutov/cypress-workflows/.github/workflows/split.yml@v1
+    with:
+      # use 4 containers
+      n: 4
+      # check the spec types in the "build" step
+      # since we don't have any specific build for our app
+      # don't forget to start the application
+      # and wait for the "http://127.0.0.1:3000" to respond
+      # Note: GitHub Actions have Node v18 installed
+      build: npm run lint
+      start: npm run start-18
+      wait-on: 'http://127.0.0.1:3000'
