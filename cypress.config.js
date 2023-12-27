@@ -1,5 +1,6 @@
 const { defineConfig } = require('cypress')
 const registerDataSession = require('cypress-data-session/src/plugin')
+const cypressSplit = require('cypress-split')
 
 module.exports = defineConfig({
   env: {
