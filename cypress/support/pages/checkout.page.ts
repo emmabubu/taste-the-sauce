@@ -10,4 +10,9 @@ export const CheckoutPage = {
       '#postal-code': zipCode,
     })
   },
+  selectors: {
+    firstName: '#first-name',
+    lastName: '#last-name',
+    postalCode: '#postal-code',
+  },
 }

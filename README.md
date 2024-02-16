@@ -1,4 +1,4 @@
-# taste-the-sauce
+# taste-the-sauce ![Cypress tests](https://img.shields.io/badge/cy%20tests-E2E%2034%20%7C%20component%201-blue)
 
 > Cypress testing tutorial using the SauceLabs sample web app
 
