@@ -41,7 +41,7 @@ it('shows a login error', () => {
   LoginPage.assertNoError()
 })
 
-it.only('shows a login error refactored', () => {
+it('shows a login error refactored', () => {
   cy.visit('/')
   cy.get(LoginPage.selectors.form).fillForm({
     [LoginPage.selectors.username]: lockedUser.username,

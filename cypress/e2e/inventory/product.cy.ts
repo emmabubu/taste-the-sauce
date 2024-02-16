@@ -67,7 +67,7 @@ describe('Product', () => {
     cy.location('pathname').should('eq', '/inventory.html')
   })
 
-  it.only('have unique ids', () => {
+  it('have unique ids', () => {
     // get all inventory items, there should be more than 3
     // from each element, get the attribute "data-itemid"
     // and confirm the ids are unique

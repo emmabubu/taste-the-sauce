@@ -20,7 +20,7 @@ describe('Cart', () => {
     cy.location('pathname').should('equal', '/inventory.html')
   })
 
-  it.only(
+  it(
     'shows the added items in order they were added',
     { viewportHeight: 1200 },
     () => {
